@@ -6,15 +6,15 @@ services:
       - "8153:8153"
       - "8154:8154"
     volumes:
-      - "./go/server/resources/godata:/godata"
-      - "./go/server/resources/home-go-dir:/home/go"
+      - "./go/server/data/godata:/godata"
+      - "./go/server/data/home-go-dir:/home/go"
   go-agent:
     build: go/agent
     links:
       - go-server
     volumes:
-      - "./go/agent/resources/godata:/godata"
-      - "./go/agent/resources/home-go-dir:/home/go"
+      - "./go/agent/data/godata:/godata"
+      - "./go/agent/data/home-go-dir:/home/go"
     environment:
       - AGENT_AUTO_REGISTER_KEY=099dc57cc1f1c30a8a72e873dc3916e5
       - AGENT_AUTO_REGISTER_RESOURCES=gradle,java

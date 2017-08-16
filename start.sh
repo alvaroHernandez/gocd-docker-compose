@@ -7,8 +7,8 @@ fi
 
 REPOSITORY_URL="$1"
 
-GO_SERVER_DATA_DIR=./go/server/resources
-GO_AGENT_DATA_DIR=./go/agent/resources
+GO_SERVER_DATA_DIR=./go/server/data
+GO_AGENT_DATA_DIR=./go/agent/data
 
 HOME_DIR=home-go-dir
 SSH_KEYS_DIR=.ssh
@@ -31,7 +31,7 @@ mkdir -p $GO_AGENT_DATA_DIR/home-go-dir
 mkdir -p $GO_AGENT_HOME_DIR/$SSH_KEYS_DIR
 
 echo "Sedding cruise-config.xml with github repo..."
-sed 's$REPOSITORY_URL$'$REPOSITORY_URL'$g' ./cruise-config.xml > ./go/server/resources/godata/config/cruise-config.xml
+sed 's$REPOSITORY_URL$'$REPOSITORY_URL'$g' ./cruise-config.xml > $GO_SERVER_DATA_DIR/godata/config/cruise-config.xml
 
 REPOSITORY_HOST=`echo "$REPOSITORY_URL" | sed 's/.*\@\(.*\)\:.*/\1/'`
 
