@@ -53,5 +53,11 @@ cp $SSH_CONFIG_FILE $GO_AGENT_SSH_KEYS_DIR/
 cp $SSH_KEY_FILE $GO_AGENT_SSH_KEYS_DIR/
 cp $SSH_KEY_FILE.pub $GO_AGENT_SSH_KEYS_DIR/
 
+echo "SSH generated and copied into Server and Agent home directory"
+echo "Please copy add the public key to your repository"
+cat $SSH_KEY_FILE.pub
+
+echo "------------------"
+
 echo "Creating containers"
 docker-compose up --build -d
