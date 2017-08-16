@@ -1,2 +1,2 @@
-./go/server/data/
-./go/agent/data/
+go/server/data/
+go/agent/data/
