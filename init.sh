@@ -54,9 +54,9 @@ cp $SSH_KEY_FILE $GO_AGENT_SSH_KEYS_DIR/
 cp $SSH_KEY_FILE.pub $GO_AGENT_SSH_KEYS_DIR/
 
 echo "SSH generated and copied into Server and Agent home directory"
-echo "Please copy add the public key to your repository"
+echo "Please add the following public key to your repository"
+echo "------------------"
 cat $SSH_KEY_FILE.pub
-
 echo "------------------"
 
 echo "Creating containers"
