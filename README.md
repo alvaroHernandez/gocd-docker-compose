@@ -10,7 +10,7 @@ To initialize the containers run:
 
 example: 
 
-`https://github.com/alvaroHernandez/gocd-docker-compose`
+`./intit.sh https://github.com/alvaroHernandez/gocd-docker-compose`
 
 This will create directories for godata and home volumes (which will be mounted on server and agent container)
 
